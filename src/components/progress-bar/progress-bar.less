@@ -1,0 +1,33 @@
+@class-prefix-progress-bar: ~'i-progress-bar';
+
+.@{class-prefix-progress-bar} {
+  --track-width: var(--i-progress-bar-track-width, 3px);
+  --fill-color: var(--i-progress-bar-fill-color, #404040);
+  --background-color: #e5e5e5;
+
+  &-trail {
+    background: var(--background-color);
+    height: var(--track-width);
+    border-radius: var(--track-width);
+  }
+  &-fill {
+    position: relative;
+    transition: width 0.3s;
+    background: var(--fill-color);
+    height: 100%;
+    border-radius: var(--track-width);
+  }
+
+  &-promote {
+    background: var(--i-colour_fill_promotion_shades);
+  }
+
+  .hot-icon-pos {
+    position: absolute;
+    right:0;
+    bottom: 0;
+    width: 12px;
+    height: 15px;
+    transform: translateX(50%);
+  }
+}

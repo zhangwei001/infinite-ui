@@ -1,0 +1,108 @@
+@class-prefix-dialog: ~'i-dialog';
+
+.@{class-prefix-dialog}-mask {
+  .@{class-prefix-dialog}-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+    max-width: 315px;
+    min-height: 165px;
+    font-size: 14px;
+    border-radius: var(--i-slider-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .@{class-prefix-dialog}-close {
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      margin-top: 24px;
+    }
+    .@{class-prefix-dialog}-close-icon {
+      font-size: 30px;
+    }
+  }
+  .@{class-prefix-dialog}-animate-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .@{class-prefix-dialog}-wrap {
+    width: 100%;
+    width: 315px;
+    min-height: 165px;
+    max-height: 392px;
+    position: relative;
+    font-size: 14px;
+    background-color: white;
+    border-radius: var(--i-slider-radius);
+    overflow: hidden;
+    .@{class-prefix-dialog}-body {
+      padding: var(--i-page_title_margin_top) var(--i-margin_page_left) 15px ;
+      min-height: 126px;
+
+      &-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: var(--i-page_title_margin_top);
+        text-align: center;
+        max-width: 330px;
+      }
+      &-desc {
+        font-size: 13px;
+        color: #595f6d;
+        margin-bottom: 15px;
+      }
+      &-content-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      &-content {
+        max-height: 200px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-size: var(--i-font-size-main);
+        line-height: 1.2;
+        color: #333;
+      }
+    }
+    .@{class-prefix-dialog}-footer {
+      user-select: none;
+      margin: 0 var(--i-margin_page_left) 15px;
+      .i-dialog-action-row {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 12px;
+        .i-button-secondary {
+          margin-right: 9px;
+        }
+        > * {
+          flex: 1;
+          font-size: 13px;
+        }
+        > .i-dialog-button {
+          padding: 10px;
+          font-size: 18px;
+          line-height: 25px;
+          border-radius: 0;
+          &-bold {
+            font-weight: bold;
+          }
+          border-right: solid 0.5px var(--i-border-color);
+          :last-child {
+            border-right: none;
+          }
+        }
+      }
+      .i-dialog-action-row:nth-child(2) {
+        .i-button-secondary {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

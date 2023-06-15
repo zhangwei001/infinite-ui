@@ -1,0 +1,29 @@
+@class-prefix-rate: ~'i-rate';
+
+.@{class-prefix-rate} {
+  --star-size: var(--i-star-size);
+  --star-padding: var(--i-star-padding);
+  display: inline-flex;
+  &-star {
+    padding: var(--star-padding);
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    &-item {
+      display: flex;
+      align-items: center;
+      width: var(--star-size);
+      height: var(--star-size);
+    }
+    &-half {
+      padding-right: 0;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-readonly {
+      cursor: unset;
+    }
+  }
+}

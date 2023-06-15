@@ -1,0 +1,52 @@
+@class-prefix-swipecell: ~'i-swipecell';
+
+.@{class-prefix-swipecell} {
+  --action-item-width: 90px;
+  --action-item-fontsize: var(--i-fontsize_content_large);
+  cursor: grab;
+  overflow: hidden;
+
+  &-wrapper {
+    position: relative;
+    overflow: visible;
+  }
+
+  &-actions {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: auto;
+    white-space: nowrap;
+    &-right {
+      left: 100%;
+      top: 0;
+      height: 100%;
+    }
+
+    &-left {
+      right: 100%;
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  &-action {
+    width: var(--action-item-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #858B9C;
+    color: #fff;
+    font-size: var(--action-item-fontsize);
+    text-align: center;
+    span {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre-wrap;
+      -webkit-line-clamp: 2;
+    }
+  }
+}

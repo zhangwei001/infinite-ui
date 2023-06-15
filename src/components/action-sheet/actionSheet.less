@@ -1,0 +1,31 @@
+@class-prefix-slipbar: ~'i-actionsheet';
+
+.@{class-prefix-slipbar} {
+    .@{class-prefix-slipbar}-cancel {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        border-top: 4px solid #f7f8fa;
+    }
+    .@{class-prefix-slipbar}-disabled {
+      opacity: 0.3;
+    }
+  .@{class-prefix-slipbar}_item {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    &:active {
+        opacity: 0.3;
+        transition: opacity ease 0.15s;
+    }
+  }
+}

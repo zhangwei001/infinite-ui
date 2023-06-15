@@ -1,0 +1,117 @@
+@class-prefix-slipbar: ~'i-slipbar';
+
+.@{class-prefix-slipbar}-mask {
+  height: 100vh;
+}
+
+.@{class-prefix-slipbar}-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 300px;
+  max-height: 80%;
+  font-size: 14px;
+  border-top-left-radius: var(--i-slider-radius);
+  border-top-right-radius: var(--i-slider-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--i-margin_page_top);
+  background-color: #fff;
+
+  .@{class-prefix-slipbar}-body {
+    width: 100%;
+    padding: var(--i-page_title_margin_top) var(--i-margin_page_left);
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--i-colour_primary_info);
+      line-height: 21px;
+      margin-bottom: 15px;
+      text-align: center;
+      word-break: break-all;
+      max-width: 330px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-content-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    &-content {
+      width: 100%;
+      max-height: 335px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-size: var(--i-font-size-main);
+      line-height: 1.2;
+      color: #333;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .@{class-prefix-slipbar}-close {
+    width: 36px;
+    height: 42px;
+    position: absolute;
+    right: 12px;
+    padding: 15px 12px;
+    top: 0;
+  }
+  .@{class-prefix-slipbar}-icon {
+    color: #878d9e;
+  }
+  .@{class-prefix-slipbar}-safe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .@{class-prefix-slipbar}-footer {
+    user-select: none;
+    width: 100%;
+    padding: 0 var(--i-margin_page_left);
+    display: flex;
+    
+    .@{class-prefix-slipbar}-action-row {
+      display: flex;
+      width: 100%;
+      align-items: stretch;
+      justify-content: center;
+      .i-button-secondary {
+        margin-right: 9px;
+      }
+      > * {
+        flex: 1;
+      }
+      > .@{class-prefix-slipbar}-button {
+        padding: 10px;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 0;
+        &-bold {
+          font-weight: bold;
+        }
+        border-right: solid 0.5px var(--i-border-color);
+        :last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  .@{class-prefix-slipbar}-footer-column {
+    flex-direction: column;
+    .@{class-prefix-slipbar}-action-row {
+      margin-bottom: 12px;
+      .i-button-secondary {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

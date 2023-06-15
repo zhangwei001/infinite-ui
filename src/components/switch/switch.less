@@ -1,0 +1,48 @@
+@class-prefix-switch: ~'i-switch';
+
+.@{class-prefix-switch} {
+    position: relative;
+    width: var(--i-switch-width);
+    height: var(--i-switch-height);
+    background-color: var(--i-colour_fill_module03);
+    border-color: var(--i-colour_fill_module03);
+    border-radius: 20px;
+    display: inline-block;
+    cursor: default;
+    vertical-align: middle;
+    border-width: 1.5px;
+    border-style: solid;
+    user-select: none;
+    box-sizing: content-box;
+    backface-visibility: hidden;
+    transition: border 0.2s ease 0s, box-shadow 0.2s ease 0s;
+    &-active {
+        background-color: var(--i-colour_fill_brand);
+        border-color: var(--i-colour_fill_brand);
+    }
+    .@{class-prefix-switch}-handler {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: var(--i-switch-height);
+        height: var(--i-switch-height);
+        background-color: #fff;
+        border-radius: 30px;
+        transition: -webkit-transform 0.2s ease-in 0s;
+        transform: translateX(0);
+    }
+}
+
+.@{class-prefix-switch}-disabled {
+    opacity: 0.3;
+}
+
+.@{class-prefix-switch}-active {
+    .@{class-prefix-switch}-handler {
+        background-color: #fff;
+        border-radius: 30px;
+        transition: -webkit-transform 0.2s ease-in 0s;
+        transform: translateX(calc(var(--i-switch-width) - var(--i-switch-height)));
+    }
+}
+

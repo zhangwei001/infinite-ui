@@ -1,0 +1,79 @@
+@class-prefix-toast: ~'i-toast';
+
+.@{class-prefix-toast}-mask {
+  .@{class-prefix-toast}-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: var(--i-info-radius);
+    transform: translate(-50%, -50%);
+    padding: 27px 15px;
+    min-width: 240px;
+    min-height: 84px;
+    max-width: 240px;
+    max-height: 150px;
+    line-height: 18px;
+  }
+  .@{class-prefix-toast}-container-center {
+    align-items: center;
+  }
+  .@{class-prefix-toast}-wrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    line-height: 18px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    word-break: break-word;
+    pointer-events: all;
+    flex: 1;
+  }
+  .@{class-prefix-toast}-icon {
+    margin-bottom: 12px;
+    width: 30px;
+    height: 30px;
+  }
+  .@{class-prefix-toast}-icon-info {
+    font-size: 30px;
+    color: #2e71ff;
+  }
+  .@{class-prefix-toast}-icon-warning {
+    font-size: 30px;
+    color: #f67f04;
+  }
+  .@{class-prefix-toast}-icon-error {
+    font-size: 30px;
+    color: #e61413;
+  }
+  .@{class-prefix-toast}-icon-success {
+    font-size: 30px;
+    color: #36b360;
+  }
+  .@{class-prefix-toast}-btn {
+    
+  }
+  .@{class-prefix-toast}-btn-text {
+    color: #BFFFD5;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 18px;
+    margin: 0;
+    text-align: center;
+    pointer-events: all;
+    min-width: 75px;
+    max-width: 97px;
+    padding-left: 12px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,81 @@
+@class-prefix-errpage: ~'i-errpage';
+
+
+.@{class-prefix-errpage} {
+  position: relative;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background: #ffffff;
+  z-index: 1;
+
+  &.@{class-prefix-errpage}-fullscreen {
+    height: 100vh;
+    padding: 0;
+  }
+
+  &.@{class-prefix-errpage}-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.@{class-prefix-errpage}-errorImg {
+  display: block;
+  height: 150px;
+  margin-top: 127px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.@{class-prefix-errpage}-oops {
+  font-size: 18px;
+  color: #111111;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.@{class-prefix-errpage}-desc {
+  font-size: 13px;
+  color: #595F6D;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+
+.@{class-prefix-errpage}-feedback {
+  font-size: 13px;
+  color: #1E71FF;
+  text-align: center;
+  margin-top: 24px;
+  font-weight: 500;
+}
+
+.@{class-prefix-errpage}-errorInfoContainer {
+  position: absolute;
+  width: 100%;
+  bottom:30px;
+  font-size: 10px;
+  color: #858B9C;
+  text-align: center;
+  margin: auto;
+
+  p {
+    text-align: center;
+    margin: 0;
+    margin-top: 7px;
+    transform: scale(0.85);
+  }
+}
+
+.@{class-prefix-errpage}-error-msg {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.@{class-prefix-errpage}-btn {
+  margin: auto !important;
+}

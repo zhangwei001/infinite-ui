@@ -1,0 +1,1 @@
+export const DEFAULT_ITRACE_CAT_ID = 106;

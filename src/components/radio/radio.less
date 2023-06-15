@@ -1,0 +1,86 @@
+@class-prefix-radio: ~'i-radio';
+
+.@{class-prefix-radio} {
+  --icon-size: 18px;
+  --font-size: 17px;
+  --font-color: var(--i-colour_primary_info);
+  --base-color: var(--i-colour_fill_brand);
+  --gap: 6px;
+  display: inline-flex;
+  vertical-align: text-bottom;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  .@{class-prefix-radio}-icon {
+    flex: none;
+    border: 1px solid var(--i-colour_tertiary_info);
+    border-radius: var(--icon-size);
+    box-sizing: border-box;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: var(--i-text_white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.@{class-prefix-radio}-block {
+    display: flex;
+  }
+  &.@{class-prefix-radio}-checked {
+    .@{class-prefix-radio}-icon {
+      border-color: var(--base-color);
+      background-color: var(--base-color);
+    }
+    &.@{class-prefix-radio}-indeterminate {
+      .@{class-prefix-radio}-icon {
+        background-color: #ffffff;
+        color: var(--base-color);
+        border-color: var(--base-color);
+      }
+    }  
+  }
+  &.@{class-prefix-radio}-disabled {
+    cursor: not-allowed;
+    --font-color: var(--i-colour_quaternary_info);
+    .@{class-prefix-radio}-icon {
+      color: #ffffff;
+      border-color: var(--i-line_gray_01);
+      background-color: var(--i-colour_fill_dimmed);
+    }
+  }
+
+  &.@{class-prefix-radio}-check-disabled {
+    cursor: not-allowed;
+    .@{class-prefix-radio}-icon.@{class-prefix-radio}-icon {
+      color: #ffffff;
+      border-color: var(--i-colour_quaternary_info);
+      background-color: var(--i-colour_quaternary_info);
+    }
+    &.@{class-prefix-radio}-indeterminate {
+      .@{class-prefix-radio}-icon {
+        background-color: var(--i-colour_secondary_background_page);
+        color: var(--i-colour_quaternary_info);
+        border-color: var(--i-colour_quaternary_info);
+      }
+    } 
+  }
+
+  .@{class-prefix-radio}-custom-icon {
+    font-size: var(--icon-size);
+  }
+
+  &-content {
+    flex: 0 1 auto;
+    color: var(--font-color);
+    font-size: var(--i-fontsize_content_medium);
+    padding-left: var(--gap);
+  }
+}

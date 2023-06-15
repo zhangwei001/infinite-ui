@@ -1,0 +1,73 @@
+@class-prefix-image: ~'i-image';
+
+.@{class-prefix-image} {
+  --width: var(--i-image-width, auto);
+  --height: var(--i-image-height, auto);
+  --placeholder-width: 40px;
+  position: relative;
+  background-size: contain;
+  width: var(--width);
+  height: var(--height);
+  display: inline-block;
+  overflow: hidden;
+  background-color: var(--i-colour_secondary_background_page);
+  &-img {
+    width: 100%;
+    height: 100%;
+  }
+  &-tip {
+    position: relative;
+    background-color: #f3f3f3;
+    height: 100%;
+    min-height: 24px;
+    min-width: 24px;
+  }
+  .i-img-arise-placeholder {
+    font-size: var(--placeholder-width);
+    width: var(--placeholder-width);
+    height: var(--placeholder-width);
+    color: #E9E9E9;
+    position: absolute;
+    left: calc(50% - var(--placeholder-width) / 2);
+    top: calc(50% - var(--placeholder-width) / 2);
+  }
+}
+
+.@{class-prefix-image}-img-light {
+  background-color: #FFFFFF;
+}
+
+.@{class-prefix-image}-arise {
+  background-image: none;
+}
+
+
+.@{class-prefix-image}-svg {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    &-large {
+      width: 43.5px;
+      height: 35px;
+    }
+
+    &-small {
+      width: 18px;
+      height: 15px;
+    }
+
+    &-avatar {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+.i-img-hide {
+  display: none;
+}

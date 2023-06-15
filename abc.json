@@ -1,0 +1,20 @@
+{
+    "assets": {
+      "type": "command",
+      "ignore": [
+        ".yarn/",
+        "/docs",
+        "/tests",
+        "/src/.umi",
+        "/node_modules",
+        "/demos"
+      ],
+      "command": {
+        "cmd": [
+          "tnpm install",
+          "tnpm run build-doc",
+          "mv ./dist $BUILD_DEST"
+        ]
+      }
+    }
+  }

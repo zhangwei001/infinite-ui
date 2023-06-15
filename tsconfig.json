@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "importHelpers": true,
+    "typeRoots": ["./src/typings", "./node_modules/@types"],
+    "lib": ["ES2016", "DOM"],
+    "paths": {
+      "infinite-ui": ["src/index.ts"],
+      "infinite-ui/src/*": ["src/*"],
+      "infinite-ui/lib/*": ["src/*"],
+      "demos": ["src/demos/index.ts"],
+      "components": ["src/index.ts"],
+      "testing": ["src/tests/testing"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  },
+  "include": ["src", ".dumi/theme", "theme"],
+  "exclude": ["node_modules", "lib", "es", "dist", ".dumi", "src/components/ellipsis/ellipsis.tsx"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "noImplicitAny": false
+    }
+  }
+}

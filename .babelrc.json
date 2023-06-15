@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": "node 12.0",
+        "loose": true,
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "babel-plugin-transform-async-to-promises",
+    ["replace-import-extension", { "extMapping": { ".less": ".css" } }],
+    ["import", {"libraryName": "lodash-es", "libraryDirectory": "lib"},"lodash-es"]
+
+  ],
+  "ignore": ["**/demos"]
+}

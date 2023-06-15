@@ -1,0 +1,81 @@
+@class-prefix-stepper: ~'i-stepper';
+
+
+.@{class-prefix-stepper} {
+    --i-stepper-height: 24px;
+    --i-stepper-input-width: 28px;
+    --i-stepper-input-font-size: 13px; 
+    --i-stepper-input-text-color: #595f6d;
+    --i-stepper-button-width: 28px; 
+    --i-stepper-button-radius: 3px; 
+    --i-stepper-button-font-size: 10px; 
+    --i-stepper-button-color: #f9f9fd;
+    --i-stepper-button-text-color: var(--i-colour_primary_info);
+    --i-stepper-button-disabled-color: var(--i-colour_quaternary_info);
+    --i-stepper-button-disabled-icon-color: #e3e7f1;
+
+    height: var(--i-stepper-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-disabled {
+        opacity: 0.3;
+    }
+    &-minus, &-plus {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+        place-content: flex-start center;
+        flex-shrink: 0;
+        height: var(--i-stepper-height);
+        width: var(--i-stepper-button-width);
+        align-items: center;
+        background-color: var(--i-stepper-button-color);
+        border-radius: var(--i-stepper-button-radius);
+        color: #9ba3ac;
+
+        svg {
+            height: var(--i-stepper-button-font-size);
+            width: var(--i-stepper-button-font-size);
+            path {
+                transition: fill 0.2s ease 0s;
+
+            }
+            display: block;
+        }
+    }
+    &-wrap {
+        border: 0px solid black;
+        position: relative;
+        box-sizing: border-box;
+        border-radius: 0px;
+        height: var(--i-stepper-height);
+        padding-left: 0px;
+        padding-right: 0px;
+        outline: 0px;
+        margin: 0;
+        text-align: center;
+        box-shadow: none;
+        width: var(--i-stepper-input-width);
+        color: var(--i-stepper-input-text-color);
+        font-size: var(--i-stepper-input-font-size);
+        appearance: none;
+    }
+    &-input {
+        width: 100%;
+        background-color: transparent;
+        border-width: 0px;
+        color: var(--i-stepper-input-text-color);
+        padding: 0px;
+        font-size: var(--i-stepper-input-font-size);
+        line-height: 24px;
+        box-sizing: border-box;
+        outline: none;
+        appearance: none;
+        text-align: center;
+    }
+}
+

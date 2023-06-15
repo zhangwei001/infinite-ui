@@ -1,0 +1,141 @@
+@class-prefix-message: ~'i-message';
+
+.@{class-prefix-message} {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 375px;
+    min-width: 375px;
+    --closeIcon-size: 10px;
+    padding: var(--i-gutter_module_top_medium) var(--i-gutter_module_right_regular) var(--i-gutter_module_bottom_medium);
+    background-color: var(--colour_primary_background_page);
+
+    &-inline {
+        width: 351px;
+        min-width: 351px;
+        border-radius: var(--i-radius_medium);
+        padding: var(--i-gutter_module_top_regular) var(--i-gutter_module_right_regular) var(--i-gutter_module_top_regular);
+    }
+
+    &-default {
+        background-color: var(--i-colour_fill_notice_shades);
+    }
+    &-warning {
+        background-color: var(--i-colour_fill_alert_shades);
+    }
+    &-error {
+        background-color: var(--i-colour_fill_error_shades);
+    }
+    &-success {
+        background-color: var(--i-colour_fill_success_shades);
+    }
+    &-promo {
+        background-color: var(--i-colour_fill_brand_light);
+    }
+    &-icon {
+        width: var(--i-page_title_margin_top);
+        height: var(--i-page_title_margin_top);
+        margin-right: var(--i-padding_inside_module_horizontally_thin);
+    }
+    &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(var(--closeIcon-size) + var(--i-gutter_module_right_regular)*2);
+        height: calc(var(--closeIcon-size) + var(--i-gutter_module_top_medium)*2);   
+        padding: var(--i-gutter_module_top_medium) var(--i-gutter_module_right_regular);
+        &-inline{
+            width: calc(var(--closeIcon-size) + var(--i-gutter_module_top_regular)*2);
+            height: calc(var(--closeIcon-size) + var(--i-gutter_module_right_regular)*2); 
+            padding: var(--i-gutter_module_top_regular) var(--i-gutter_module_right_regular);
+        }
+    }
+    &-wrap {
+        flex: 1;
+        max-width: 100%;
+        line-height: 16.5px;
+
+        &-default {
+            color: var(--i-colour_link_info);
+        }
+        &-warning {
+            color: var(--i-colour_alert_info);
+        }
+        &-error {
+            color: var(--i-colour_error_info);
+        }
+        &-success {
+            color: var(--i-colour_success_info);
+        }
+
+    }
+    &-primary {
+        &-default {
+            background-color: var(--i-colour_fill_notice_shades);
+        }
+        &-warning {
+            background-color: var(--i-colour_fill_alert_shades);
+        }
+        &-error {
+            background-color: var(--i-colour_fill_error_shades);
+        }
+        &-success {
+            background-color: var(--i-colour_fill_success_shades);
+        }
+        &-promo {
+            background-color: var(--i-colour_fill_brand_light);
+        }
+    }
+    &-secondary {
+        &-default {
+            border: 1px solid var(--i-colour_outline_sm_notice);
+        }
+        &-warning {
+            border: 1px solid var(--i-colour_outline_sm_warning);
+        }
+        &-error {
+            border: 1px solid var(--i-colour_outline_sm_error);
+        }
+        &-success {
+            border: 1px solid var(--i-colour_outline_sm_success);
+        }
+    }
+    &-title {
+        margin: 0;
+        font-weight: 500;
+        font-size: var(--i-fontsize_content_large);
+        padding-bottom: var(--i-padding_inside_module_horizontally_thin);
+    }
+    &-content {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin: 0;
+        font-size: var(--i-fontsize_content_medium);
+        font-weight: 400;
+        margin: 0;
+    }
+    &-extra {
+        padding-top: var(--i-padding_inside_module_horizontally_thin);
+        display: flex;
+        align-items: center;
+        span {
+            font-weight: 600;
+        }
+
+        .@{class-prefix-message}-arrow {
+            width: 12px;
+            margin-left: 3px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+          }
+    }
+}
+.@{class-prefix-message}-closeable {
+   .@{class-prefix-message}-wrap {
+            margin-right: calc(var(--closeIcon-size)  + var(--i-padding_inside_module_horizontally_thin));  ;
+    }
+}
